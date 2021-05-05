@@ -1,10 +1,12 @@
-const PORT = process.env.PORT || 3001;
+
 const fs = require('fs');
 const path = require('path')
 const express = require('express');
 const app = express();
 
 const theNotes = require('./db/db.json');
+
+const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -14,7 +16,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-app.get('api/notes', (req, res) => {
+app.get('/api/notes', (req, res) => {
     res.json(theNotes.slice(1));
 });
 
@@ -71,5 +73,5 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log('API server loaded to port ${Port}!');
+    console.log('API server loaded to port ${PORT}');
 });
