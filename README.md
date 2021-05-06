@@ -9,7 +9,7 @@
   -[Description](#Description)
   -[Installation](#Installation)
   -[Usage](#Usage)
-  -[Screens](#Screens)
+  -[Example](#Example)
   -[Contribution](#Contribution)
   -[Questions & Contact Information](#Questions)
 
