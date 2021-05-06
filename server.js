@@ -10,7 +10,7 @@ const theNotes = require('./db/db.json');
 //middleware to handle data parsingpusp
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('Public'));
+app.use(express.static('public'));
 
 //return saved notes as json
 app.get('/api/notes', (req, res) => {
