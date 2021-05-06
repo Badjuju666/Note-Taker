@@ -6,7 +6,7 @@ const path = require('path')
 const express = require('express');
 const app = express();
 
-const theNotes = require('/db/db.json');
+const theNotes = require('./db/db.json');
 //middleware to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -43,7 +43,7 @@ function makeNote(body, notesArray) {
 
     notesArray.push(note);
     fs.writeFileSync(
-        path.join(__dirname, '/db/db.json'),
+        path.join(__dirname, './db/db.json'),
         JSON.stringify(notesArray, null, 2)
     );
     return note;
@@ -61,7 +61,7 @@ function destroyNote(id, notesArray) {
         if(letNote.id == id){
             notesArray.splice(i, 1);
             fs.writeFileSync(
-                path.join(__dirname, '/db/db.json'),
+                path.join(__dirname, './db/db.json'),
                 JSON.stringify(notesArray, null, 2)
             );
             break;
