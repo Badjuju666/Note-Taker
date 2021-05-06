@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 
 const theNotes = require('./db/db.json');
-//middleware to handle data parsing
+//middleware to handle data parsingpusp
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('Public'));
@@ -26,9 +26,6 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-});
 //notes made go to request body then to json and then return to display
 function makeNote(body, notesArray) {
     const note = body;
