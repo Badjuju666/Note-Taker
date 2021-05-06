@@ -33,7 +33,7 @@
 ## Example 
 ### - Outcome product...
 
-![pics](https://github.com/Badjuju666/README.md-GenZ/blob/main/Screen.png)
+![pics](https://github.com/Badjuju666/Note-Taker/blob/master/screen.png)
 
 
 ## Contribution
